@@ -1,0 +1,46 @@
+package ControlFlow2;
+
+import java.util.Scanner;
+
+public class Poligono {
+	public int lados;
+	double area;
+	public float medida;
+	private Scanner ler;
+	
+	public void Print() {
+		ler = new Scanner(System.in);
+		System.out.println("Digite a quantidades de lados de um poligono: ");
+		lados = ler.nextInt();
+		if(lados<3 ) {
+			System.out.println("Não é um poligono");
+		}break;
+		System.out.println("Digite a medida do lado do poligono(cm): ");
+		medida = ler.nextFloat();
+	}
+	public void Calc() {
+		if(lados>3 ) {
+			System.out.println("Não é um poligono");
+		}
+		else if(lados<5){
+			System.out.println("Poligono nao identificado");
+		}else if(lados == 3) {
+			area = (lados * lados * 1.732)/4;
+			System.out.println("TRIANGULO e o valor da area é: "+area);
+		}else if(lados == 4) {
+			area = (lados * lados);
+			System.out.println("QUADRADO e o valor da area é: "+area);
+		}else if (lados == 5) {
+			area = (1.72 * lados * lados);
+			System.out.println("PENTAGONO e o valor da area é: "+area);
+		}
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Poligono p = new Poligono();
+		p.Print();
+		p.Calc();
+	}
+
+}
