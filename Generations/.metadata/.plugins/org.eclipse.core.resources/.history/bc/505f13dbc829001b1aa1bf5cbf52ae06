@@ -1,0 +1,23 @@
+package EstruturaRepeticao;
+
+import java.util.Scanner;
+
+public class Positivo {
+	int media, soma, totalN, num;
+	private Scanner ler;
+	public void Calc() {
+		while(num < 0) {
+			ler = new Scanner(System.in);
+			System.out.println("Digite a idade: ");
+			System.out.println("para encerrar digite -99");
+			num = ler.nextInt();
+			
+			
+	}
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

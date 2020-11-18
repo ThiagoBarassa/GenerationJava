@@ -1,0 +1,24 @@
+package EstruturaRepeticao;
+
+import java.util.Scanner;
+
+public class Idade {
+	int idade,c21=0,c50=0;
+private Scanner ler;
+		
+	public void Calc() {
+		while(idade!=-99) {
+		ler = new Scanner(System.in);
+		System.out.println("Digite a idade: ");
+		idade = ler.nextInt();
+		System.out.println("para encerrar digite -99");
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

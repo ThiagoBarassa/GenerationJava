@@ -1,0 +1,25 @@
+package EstruturaRepeticao;
+
+import java.util.Scanner;
+
+public class Soma {
+	int num, soma;
+	private Scanner ler;
+	
+	public void Calc() {
+		do {
+			ler = new Scanner(System.in);
+			System.out.println("Digite a idade: ");
+			System.out.println("para encerrar digite 0");
+			num = ler.nextInt();
+			
+			soma = num+num;
+		}while(num == 0);
+		System.out.println(soma);
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,27 @@
+package EstruturaRepeticao;
+
+import java.util.Scanner;
+
+public class Fatorial {
+	int res,n;
+	private Scanner ler;
+	public void Print() {
+		ler = new Scanner(System.in);
+		System.out.println("Digite um valor: ");
+		n = ler.nextInt();
+	}
+	public void Calc() {
+		do {
+			res = res + n;
+			n=n-1;
+		}while(n>=0);
+		System.out.println(res);
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Fatorial f = new Fatorial();
+		f.Print();
+		f.Calc();
+	}
+
+}

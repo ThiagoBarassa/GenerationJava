@@ -1,0 +1,34 @@
+package EstruturaRepeticao;
+
+import java.util.Scanner;
+
+public class Idade {
+	int idade,c21=0,c50=0;
+private Scanner ler;
+		
+	public void Calc() {
+		while(idade!=-99) {
+		ler = new Scanner(System.in);
+		System.out.println("Digite a idade: ");
+		idade = ler.nextInt();
+		System.out.println("para encerrar digite -99");
+		
+		if(idade>21) {
+			c21++;
+		}else if(idade<50) {
+			c50++;
+		}
+		}
+		System.out.println("Pessoas com idade menor de 21 anos: "+c21+" Pessoas com idade "+
+		"maior de 50 ano: "+c50);
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Idade i = new Idade();
+		i.Calc();
+
+	}
+
+}

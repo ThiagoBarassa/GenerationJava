@@ -1,0 +1,51 @@
+package EstruturaRepeticao;
+
+import java.util.Scanner;
+
+public class Prefeitura {
+	int salario,numFilho, mediaS,mediaF, maiorS, percent,somaS,somaF,c=0, x;
+	private Scanner ler;
+	
+	public void Calc() {
+		for(int i=0;i<2;i++) {
+			ler = new Scanner(System.in);
+			System.out.println("Digite o salario: ");
+			salario = ler.nextInt();
+			System.out.println("Digite o numero de filhos: ");
+			numFilho = ler.nextInt();
+		
+			somaS = somaS + salario;
+			mediaS = somaS / i;
+		
+			somaF = somaF + numFilho;
+			mediaF = somaF /i;
+			
+			if(salario < 100) {
+				 c++;
+				percent = c * 20 / 100; 
+			}
+			if(x==0) {
+				maiorS = salario;
+			}
+			if(salario>maiorS) {
+				maiorS = salario;
+			}
+		}
+		System.out.println(mediaS);
+		System.out.println(mediaF);
+		System.out.println(maiorS);
+		System.out.println(percent);
+		}
+			
+		public void Print() {
+			
+		}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Prefeitura p = new Prefeitura();
+		p.Calc();
+		p.Print();
+	}
+
+}

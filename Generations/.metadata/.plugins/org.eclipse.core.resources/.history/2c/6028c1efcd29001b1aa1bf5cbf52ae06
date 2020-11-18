@@ -1,0 +1,19 @@
+package EstruturaRepeticao;
+
+public class Contador {
+	int c;
+	public void Calc() {
+		do {
+			System.out.println(c+5);
+			if(c<=300 && c>=400) {
+				c+=3;
+			}
+		}while(c<=233 && c>=456);
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Contador c = new Contador();
+		c.Calc();
+	}
+
+}
