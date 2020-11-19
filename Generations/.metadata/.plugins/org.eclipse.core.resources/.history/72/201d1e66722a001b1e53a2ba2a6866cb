@@ -1,0 +1,57 @@
+package VetoresMatrizes;
+
+import java.util.Scanner;
+
+public class MatrizNotas {
+	int n1[][] = new int [4][6],n2[][] = new int [4][6];
+	int m1[][] = new int [4][6],m2[][] = new int [4][6];
+	int i,j;
+	private Scanner ler;
+	
+	public void Calc() {
+		for(i=0;i<4;i++) {
+			for(j=0;j<6;j++) {
+				ler = new Scanner(System.in);
+				System.out.println("Digite a nota 1: ");
+				n1[i][j] = ler.nextInt();
+			}
+		}
+		for(i=0;i<4;i++) {
+			for(j=0;j<6;j++) {
+				System.out.println("["+n1[i][j]+"]");
+			}
+		}
+		for(i=0;i<4;i++) {
+			for(j=0;j<6;j++) {
+				ler = new Scanner(System.in);
+				System.out.println("Digite a nota 2: ");
+				n2[i][j] = ler.nextInt();
+			}
+		}
+		for(i=0;i<4;i++) {
+			for(j=0;j<6;j++) {
+				System.out.println("["+n2[i][j]+"]");
+			}
+		}
+		System.out.println("Soma: ");
+		for(i=0;i<4;i++) {
+			for(j=0;j<6;j++) {
+				m1[i][j] = n2[i][j]+n2[i][j];
+				System.out.println("["+m1[i][j]+"]");
+			}
+		}
+		System.out.println("Diferença: ");
+		for(i=0;i<4;i++) {
+			for(j=0;j<6;j++) {
+				m2[i][j] = n2[i][j]-n2[i][j];
+				System.out.println("["+m2[i][j]+"]");
+			}
+		}
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		MatrizNotas mn = new MatrizNotas();
+		mn.Calc();
+	}
+
+}

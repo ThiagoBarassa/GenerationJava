@@ -1,0 +1,76 @@
+package VetoresMatrizes;
+
+import java.util.Scanner;
+
+public class Dado {
+	int i,media, soma=0,maior=0,cont=0;
+	int v[]= new int[10];
+	private Scanner ler;
+	
+	public void Calc() {
+		for( i=0;i<10;i++) {
+			ler = new Scanner(System.in);
+			System.out.println("Digite um numero: ");
+			if(i>0 && i<6) {
+			v[i] = ler.nextInt();
+			}
+		}
+		for( i=0;i<10;i++) {
+			if(v[i]>maior) {
+				maior = v[i];
+			}
+		}
+		for( i=0;i<10;i++) {
+			if(v[i]==maior) {
+				cont++;
+			}
+		}
+		System.out.println("a maior face lançada foi: "+maior+" um total de vezes: "+cont);
+		for( i=0;i<10;i++) {
+			soma=soma + v[i];
+		}
+		System.out.println(" Media: "+soma/10);
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+/*programa
+{
+	funcao inicio()
+	{
+		inteiro i, media, soma=0, maior=0, cont=0
+		inteiro v[10]
+		
+		para(i=0;i<10;i++){
+			
+		escreva(v[i])
+		leia(v[i])
+		
+		}
+		//5escreva("lançamentos: [",v[i],"]")
+		
+			para(i=0;i<10;i++){
+			se(v[i]>maior){
+				maior = v[i]
+			}
+			
+		}	
+		para(i=0;i<10;i++){
+			se(v[i]==maior){
+				cont++
+			}
+			
+		}
+		
+		escreva("a maior face lançada foi: ",maior," um total de vezes: ",cont)
+		
+	para(i=0;i<10;i++){
+		soma = soma+v[i]
+	}
+	escreva("  Media: 3",soma/10)
+	}
+	
+}*/
